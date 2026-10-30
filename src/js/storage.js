@@ -1,0 +1,8 @@
+export const KEY='osint-academy-v1';
+export const defaults=()=>({completed:[],bookmarks:[],notes:{},answers:{},attempts:{},review:{},lastSection:'core',theme:'dark',report:{},savedAt:null});
+export function validate(obj){return !!obj&&typeof obj==='object'&&!Array.isArray(obj)&&['completed','bookmarks'].every(k=>Array.isArray(obj[k])&&obj[k].every(v=>typeof v==='string'))&&['notes','answers','attempts','review','report'].every(k=>obj[k]&&typeof obj[k]==='object'&&!Array.isArray(obj[k]))&&typeof obj.lastSection==='string'&&['dark','light'].includes(obj.theme)}
+export function load(){try{const obj=JSON.parse(localStorage.getItem(KEY));return validate(obj)?{...defaults(),...obj}:defaults()}catch{return defaults()}}
+export function save(obj){obj.savedAt=new Date().toISOString();try{localStorage.setItem(KEY,JSON.stringify(obj));return true}catch{return false}}
+export function exportData(obj){return JSON.stringify({...obj,exportedAt:new Date().toISOString()},null,2)}
+export function importData(str){const parsed=JSON.parse(str);if(!validate(parsed))throw Error('صيغة ملف التقدم غير صحيحة');return {...defaults(),...parsed}}
+export function reviewNext(previous={},grade=3,now=Date.now()){const success=grade>=3;const interval=success?Math.min(90,previous.interval?Math.ceil(previous.interval*(grade===5?2.5:1.7)):1):0;return {interval,due:now+(success?interval:1)*86400000,reps:success?(previous.reps||0)+1:0,lastGrade:grade}}
