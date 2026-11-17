@@ -55,6 +55,8 @@ Unless the maintainer specifies otherwise:
 - Keep OSINT, CORPINT, and GEOINT labs lawful, proportionate, and source-led.
 - Use fictional entities and synthetic records by default. A live technical exercise must use an asset the learner owns or has written authorization to assess.
 - GEOINT practical work should focus on civilian, environmental, public-interest, and historical examples. Do not enable real-time tracking of military units, vessels, aircraft, installations, or individuals, and do not publish operational coordinates that could facilitate targeting.
+- MILINT lessons must remain non-operational: focus on historical verification, public accountability, arms-transfer records, civilian transport-data literacy, and published expert reports. Do not provide real-time tracking of military aircraft, ships, units, convoys, bases, deployments, routes, schedules, or targetable coordinates.
+- Never instruct learners to handle, move, inspect, dismantle, or identify unexploded ordnance in the field. Teach distance, non-contact, warning, and reporting to qualified authorities; use published expert documentation only.
 - Passive-recon results do not authorize port scanning, service probing, exploitation, credential testing, or contacting discovered systems.
 - Do not instruct learners to impersonate real people, target employees, obtain private records, bypass access controls, steal credentials, or exploit suppliers as a route into another organization.
 - Employee and supplier research should support governance, due diligence, and third-party risk management—not targeting or social engineering.
