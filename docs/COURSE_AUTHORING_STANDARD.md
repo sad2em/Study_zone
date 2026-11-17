@@ -2,6 +2,8 @@
 
 This document defines how Study Zone lessons are researched, written, assessed, and maintained. It should be followed by human authors and AI tools.
 
+**Architecture constraint:** Study Zone is a static front end built with HTML, CSS, and browser JavaScript. Do not introduce a backend, Node.js application server, database, or server-side runtime. Existing Vite/Node commands are only local development/build/test tooling.
+
 ## 1. Editorial voice
 
 - Arabic is the primary language; keep standard technical terms in English where they are useful.
@@ -90,7 +92,7 @@ For every new session, see `AGENTS.md` for the repository integration checklist.
 - App imports, dashboard tile, lesson navigation, and route selection.
 - Accurate total session and section counts.
 - README update.
-- Tests for section count, duration, allowed tags, unique IDs, cards, exercises, and representative grading.
+- Tests for section count, duration, allowed tags, unique IDs, cards, exercises, and representative grading. The existing Node test runner is development-only; it does not change the static front-end architecture.
 - Actual test/build execution where available. Report limitations honestly.
 
 ## 8. Final editorial review
