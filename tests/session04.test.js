@@ -4,11 +4,12 @@ import {lesson,cards} from '../src/lessons/lesson-04/content.js';
 import {exercises} from '../src/lessons/lesson-04/exercises.js';
 import {evaluate} from '../src/js/engine.js';
 
-test('session 04: eight structured sections and twelve review cards',()=>{
+test('session 04: nine structured sections and twelve review cards',()=>{
  assert.equal(lesson.id,'04');
- assert.equal(lesson.sections.length,8);
+ assert.equal(lesson.sections.length,9);
+ assert.equal(lesson.sections.reduce((sum,s)=>sum+Number.parseInt(s.time,10),0),120);
  assert.equal(cards.length,12);
- assert.equal(new Set(lesson.sections.map(s=>s.id)).size,8);
+ assert.equal(new Set(lesson.sections.map(s=>s.id)).size,9);
  for(const section of lesson.sections){
   assert.ok(section.body.length>=5);
   assert.ok(section.warning);
