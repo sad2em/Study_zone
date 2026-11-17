@@ -52,8 +52,9 @@ Unless the maintainer specifies otherwise:
 
 ## Safe practical scope
 
-- Keep OSINT and CORPINT labs lawful, proportionate, and source-led.
+- Keep OSINT, CORPINT, and GEOINT labs lawful, proportionate, and source-led.
 - Use fictional entities and synthetic records by default. A live technical exercise must use an asset the learner owns or has written authorization to assess.
+- GEOINT practical work should focus on civilian, environmental, public-interest, and historical examples. Do not enable real-time tracking of military units, vessels, aircraft, installations, or individuals, and do not publish operational coordinates that could facilitate targeting.
 - Passive-recon results do not authorize port scanning, service probing, exploitation, credential testing, or contacting discovered systems.
 - Do not instruct learners to impersonate real people, target employees, obtain private records, bypass access controls, steal credentials, or exploit suppliers as a route into another organization.
 - Employee and supplier research should support governance, due diligence, and third-party risk management—not targeting or social engineering.
