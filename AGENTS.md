@@ -5,7 +5,8 @@ Read this file before changing the project or adding a lesson. These rules are p
 ## Product and audience
 
 - Study Zone is an Arabic-first, RTL learning project for practical OSINT and defensive cybersecurity.
-- Keep the existing vanilla JavaScript + Vite architecture. Do not introduce a framework, dependency, build system, or redesign unless the maintainer explicitly asks.
+- This is a static front-end project: HTML, CSS, and browser JavaScript only. No backend, database, API server, Node.js application server, or server-side runtime.
+- Keep the existing vanilla JavaScript + Vite setup. Vite and the existing Node-based scripts are local development/build/test tooling only; they are not part of the deployed site. Do not add any new Node runtime, server, framework, or dependency.
 - Match the established lesson format and navigation used by Sessions 01–05. Inspect neighbouring lessons before editing.
 - Write natural, precise Arabic. Avoid generic AI-style introductions, repeated conclusions, inflated claims, filler paragraphs, decorative jargon, and fake case studies presented as facts.
 - Every paragraph must teach a concept, explain a limitation, give an actionable learning step, or support an assessment.
@@ -36,7 +37,7 @@ Use the tags deliberately. Do not mark every paragraph as `must`. A tool name al
 Each lesson content file exports:
 
 - `lesson`: an object with `id`, `title`, `subtitle`, `duration`, and `sections`.
-- Each section has a unique `id`, English `en`, Arabic `title`, `time` formatted as `'N دقيقة'`, a concise `lead`, a `body` array, and a specific `warning`.
+- Each section has a unique `id`, English `en`, Arabic `title`, `time` formatted as `'N دقيقة'`, a concise `lead`, a `body` array, and a specific `warning`. Optional `icon` provides a meaningful symbol, and optional `flow` is a short array of 4–5 steps rendered as a compact visual process strip.
 - Each body block has `h`, `p`, and one of the three allowed `tag` values. Optional `link:['Label','URL']` and `code` are supported.
 - `cards`: concise question/answer pairs for spaced repetition.
 - A separate `exercises.js` exports `exercises`.
@@ -68,11 +69,12 @@ A new lesson is not complete just because its content file exists. Update all re
 3. Add the course tile and accurate section count in `dashboard()`.
 4. Add the session link and selected state in `side()`.
 5. Add the session selector in `render()` so lesson, lab, review, and notes routes load the correct data.
-6. Update the dashboard's session count and the “جلسات تعليمية” label.
-7. Add `tests/sessionNN.test.js` for structure, timing, tags, unique IDs, exercise types, and representative grading.
-8. Update `README.md` and keep this file and `docs/COURSE_AUTHORING_STANDARD.md` consistent.
-9. Run `npm test` and `npm run build` when execution access is available. Do not claim tests passed unless they were actually run.
-10. Review the diff for broken imports, route selection, duplicated content, incorrect counts, stale external links, and accidental changes to old lessons.
+6. Use semantic, meaningful icons and concise visual flows where they improve comprehension. Do not add decoration that does not explain the lesson.
+7. Update the dashboard's session count and the “جلسات تعليمية” label.
+8. Add `tests/sessionNN.test.js` for structure, timing, tags, unique IDs, exercise types, and representative grading. Tests may use the existing Node test runner, but this must never create a Node backend or runtime dependency in the site.
+9. Update `README.md` and keep this file and `docs/COURSE_AUTHORING_STANDARD.md` consistent.
+10. Run `npm test` and `npm run build` when execution access is available. Do not claim tests passed unless they were actually run.
+11. Review the diff for broken imports, route selection, duplicated content, incorrect counts, stale external links, and accidental changes to old lessons.
 
 ## Handoff
 
