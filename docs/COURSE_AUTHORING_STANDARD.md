@@ -77,6 +77,7 @@ A useful lab describes: objective, authorized scope, inputs, steps, expected out
 
 - Use public sources and lawful collection methods.
 - Use live technical tools only against assets owned by the learner or covered by written authorization.
+- GEOINT labs should use civilian, environmental, public-interest, or historical cases. Do not create exercises for real-time military tracking, target identification, or publishing operational locations.
 - Do not turn passive discovery into active scanning or exploitation.
 - Do not target employees, vendors, or family members as access paths.
 - Do not teach impersonation, credential collection, private-data extraction, evasion, or manipulation of real people.
