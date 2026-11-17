@@ -275,3 +275,8 @@ body{background:var(--bg);color:var(--text);letter-spacing:-.01em}.shell{isolati
  .flow-node span{min-width:19px;height:19px}
  .flow-arrow{font-size:12px}
 }
+
+.course-tile-top{display:flex;align-items:center;gap:11px}
+.course-tile-top .course-progress{margin-inline-start:auto}
+.course-symbol{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:color-mix(in srgb,var(--accent) 9%,var(--panel2));border:1px solid color-mix(in srgb,var(--accent) 18%,var(--border));font-size:17px}
+@media(max-width:760px){.course-symbol{width:30px;height:30px;font-size:15px}}
