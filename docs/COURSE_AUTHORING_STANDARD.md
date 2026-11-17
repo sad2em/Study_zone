@@ -78,6 +78,8 @@ A useful lab describes: objective, authorized scope, inputs, steps, expected out
 - Use public sources and lawful collection methods.
 - Use live technical tools only against assets owned by the learner or covered by written authorization.
 - GEOINT labs should use civilian, environmental, public-interest, or historical cases. Do not create exercises for real-time military tracking, target identification, or publishing operational locations.
+- MILINT labs must be non-operational and use historical/public reports, aggregate arms-transfer records, civilian transport-data examples, or synthetic data. Do not create tasks for real-time tracking of military aircraft, vessels, units, convoys, bases, deployments, routes, schedules, or targetable coordinates.
+- Do not teach field handling, inspection, disassembly, or technical identification of unexploded ordnance. Direct learners to keep distance, avoid contact, and report suspected items to qualified authorities.
 - Do not turn passive discovery into active scanning or exploitation.
 - Do not target employees, vendors, or family members as access paths.
 - Do not teach impersonation, credential collection, private-data extraction, evasion, or manipulation of real people.
