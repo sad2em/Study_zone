@@ -7,7 +7,7 @@ Read this file before changing the project or adding a lesson. These rules are p
 - Study Zone is an Arabic-first, RTL learning project for practical OSINT and defensive cybersecurity.
 - This is a static front-end project: HTML, CSS, and browser JavaScript only. No backend, database, API server, Node.js application server, or server-side runtime.
 - Keep the existing vanilla JavaScript + Vite setup. Vite and the existing Node-based scripts are local development/build/test tooling only; they are not part of the deployed site. Do not add any new Node runtime, server, framework, or dependency.
-- Match the established lesson format and navigation used by Sessions 01–06. Inspect neighbouring lessons before editing.
+- Match the established lesson format and navigation used by Sessions 01–07. Inspect neighbouring lessons before editing.
 - Write natural, precise Arabic. Avoid generic AI-style introductions, repeated conclusions, inflated claims, filler paragraphs, decorative jargon, and fake case studies presented as facts.
 - Every paragraph must teach a concept, explain a limitation, give an actionable learning step, or support an assessment.
 
